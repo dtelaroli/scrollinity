@@ -6,7 +6,7 @@ $(document).ready(function(){
     var sign = load_path.indexOf('?') >= 0 ? '&' : '?'
     $.get(load_path + sign + 'page=' + (++page_num), function(data, e) {
       if(data.length < 5) {
-        var page_num = 0;
+        page_num = 0;
         return false;
       }
       data_container.append(data);
